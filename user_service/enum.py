@@ -21,3 +21,30 @@ transcode_error_codes = (
     (0, 'Success'),
     (1, 'Input_File_Not_Found'),
 )
+
+progress_codes = (
+        ('PENDING', _('Pending')),
+        ('QUEUED', _('Queued')),
+        ('INPROGRESS', _('InProgress')),
+        ('COMPLETED', _('Completed')),
+        ('CANCELLED', _('Cancelled')),
+        ('FAILED', _('Failed')),
+)
+
+phase_codes = (
+    ('DOWNLOAD', _('Download')), ('TRANSCODE', _('Transcode')), ('THUMBNAIL', _('Thumbnail')),
+    ('SPRITE', _('Sprite')), ('UPLOAD', _('Upload')),
+)
+
+notification_codes = (
+    ('EMAIL', _('Email')),
+    ('SMS', _('Sms')),
+)
+
+error_levels = (('Info', 0), ('Warning', 1), ('Critical', 2))
+
+job_priority_levels = (
+    ('HIGH', _('High')),
+    ('MEDIUM', _('Medium')),
+    ('LOW', _('Low')),
+)

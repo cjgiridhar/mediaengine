@@ -35,7 +35,7 @@ class UserResource(ModelResource):
                             'last_login', 'date_joined')
         return bundle
 
-    def alter_list_data_to_serialize(self, request, data_dict): 
+    def alter_list_data_to_serialize(self, request, data_dict):
         if isinstance(data_dict, dict):
             if 'meta' in data_dict:
                 del(data_dict['meta'])
