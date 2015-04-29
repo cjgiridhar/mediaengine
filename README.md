@@ -16,3 +16,15 @@ Content-Type: application/json
 Cache-Control: no-cache
 
 {"profiles": [{"audio": {"audio_bitrate": 128000, "audio_channels": 2, "audio_codec": "libfdk_aac", "audio_sample_rate": 44100, "id": 1}, "frame_rate": {"frame_rate": 30, "id": 1, "key_frame_interval": 180}, "id": 1, "resolution": {"aspect": "4:3", "height": 720, "id": 1, "width": 1280}, "video": {"id": 1, "video_bitrate": 512000, "video_codec": "libx264", "video_preset": "ultrafast", "video_profile": "baseline"}}]}
+
+
+Chetans-MacBook-Pro-2:mediaengine cgiridhar$ curl --dump-header - -H "Content-Type: application/json" -H "Authorization: ApiKey admin:78fb77da661261a05f3e429108046ac16f032we3" -X POST --data '{"audio": {"audio_bitrate": 128000, "audio_channels": 2, "audio_codec": "libfdk_aac", "audio_sample_rate": 44100, "id": 1}, "frame_rate": {"frame_rate": 30, "id": 1, "key_frame_interval": 180}, "resolution": {"aspect": "4:3", "height": 720, "id": 1, "width": 1280}, "video": {"id": 1, "video_bitrate": 512000, "video_codec": "libx264", "video_preset": "ultrafast", "video_profile": "baseline"}, "user":{"username":"deepti.21"}}'  http://localhost:8000/api/v1/profiles/
+HTTP/1.0 201 CREATED
+Date: Wed, 29 Apr 2015 03:47:44 GMT
+Server: WSGIServer/0.1 Python/2.7.5
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+Content-Type: application/json
+Location: http://localhost:8000/api/v1/profiles/2/
+
+{"audio": {"audio_bitrate": 128000, "audio_channels": 2, "audio_codec": "libfdk_aac", "audio_sample_rate": 44100, "id": 1}, "frame_rate": {"frame_rate": 30, "id": 1, "key_frame_interval": 180}, "id": 2, "resolution": {"aspect": "4:3", "height": 720, "id": 1, "width": 1280}, "user": {"date_joined": "2015-04-16T11:34:44.883439", "email": "deepti.21@gmail.com", "first_name": "D", "last_login": "2015-04-16T11:34:44.883406", "last_name": "Giridhar", "username": "deepti.21"}, "video": {"id": 1, "video_bitrate": 512000, "video_codec": "libx264", "video_preset": "ultrafast", "video_profile": "baseline"}}
